@@ -27,9 +27,10 @@ func InitWebServer(config config.Config) *web.Server {
 }
 
 func InitRpcServer(config config.Config) *rpc.BusinessService {
-	wire.Build(
-		RpcProviderSet,
-		service.ProviderSet,
+	panic(
+		wire.Build(
+			RpcProviderSet,
+			service.ProviderSet,
+		),
 	)
-	return nil
 }
